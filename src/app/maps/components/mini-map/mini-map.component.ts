@@ -11,6 +11,7 @@ export class MiniMapComponent {
   @Input() lngLat?: [number, number];
   @ViewChild('map') divMap?: ElementRef;
 
+
   ngAfterViewInit() {
     if( !this.divMap?.nativeElement ) throw "Map Div not found";
     if( !this.lngLat ) throw "LngLat can't be null";
